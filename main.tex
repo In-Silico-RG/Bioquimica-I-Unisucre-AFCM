@@ -1,0 +1,136 @@
+\documentclass{book} 
+% ====================== 
+% METADATOS DEL LIBRO 
+% ====================== 
+\title{Bioquímica I} 
+\newcommand{\booksubtitle}{Fundamentos Moleculares de la Vida} 
+\newcommand{\booklicense}{Creative Commons Zero 1.0 Universal} 
+\author{Aldo F. Combariza \\ Facultad de Educación y Ciencias \\ Programa de Biología} 
+\newcommand{\authorsubtitle}{Universidad de Sucre, Colombia} 
+
+% Create convenient commands \booktitle and \bookauthor 
+\makeatletter 
+\newcommand{\booktitle}{\@title} 
+\newcommand{\bookauthor}{\@author} 
+\makeatother 
+
+% ====================== 
+% CONFIGURACIÓN DE PAQUETES 
+% ====================== 
+\usepackage[utf8]{inputenc} 
+\usepackage[spanish]{babel} 
+\usepackage{amssymb} 
+\usepackage{fix-cm} 
+\usepackage{tikz} 
+\usepackage{amsmath} 
+\usepackage{chemformula} 
+\usepackage{graphicx} 
+\usepackage{booktabs} 
+\usepackage{textgreek} 
+\usepackage{makeidx} 
+\usepackage[table]{xcolor} 
+\usepackage{makeidx} 
+\usepackage{newunicodechar} 
+\newunicodechar{↔}{\leftrightarrow} 
+\makeindex 
+\usepackage{tabularx} 
+
+% Configuración de dimensiones para libro impreso 
+\usepackage[bindingoffset=0.625in, left=.5in, right=.5in, top=.8125in, bottom=.9375in, paperwidth=6.375in, paperheight=9.25in]{geometry} 
+\usepackage{tikz} 
+\usetikzlibrary{arrows.meta} 
+\tikzset{arrow/.style={-{Stealth[scale=1.2]}, thick}} 
+\renewcommand{\contentsname}{Índice General} 
+
+% ====================== 
+% CONTENIDO PRINCIPAL 
+% ====================== 
+\begin{document} 
+\frontmatter 
+% ---- PÁGINA DE MEDIO TÍTULO ---- 
+\newgeometry{top=1.75in,bottom=.5in} 
+\begin{titlepage} 
+\begin{flushleft} 
+\textbf{\fontfamily{qcs}\fontsize{48}{54}\selectfont Bioquímica\\I\\} 
+\par\noindent\rule{\textwidth}{4pt}\\ 
+\begin{tikzpicture} 
+\shade[bottom color=lightgray,top color=white] (0,0) rectangle (\textwidth, 1.5) node[midway] {\textbf{\large \textit{\booksubtitle}}}; 
+\end{tikzpicture} 
+\begin{flushright} \Large Primera Edición \end{flushright} 
+vspace{\fill} 
+\end{flushleft} 
+\end{titlepage} 
+\restoregeometry 
+\thispagestyle{empty} 
+% ---- PÁGINA DE TÍTULO PRINCIPAL ---- 
+\newgeometry{top=1.75in,bottom=.5in} 
+\begin{titlepage} 
+\begin{flushleft} 
+\textbf{\fontfamily{qcs}\fontsize{48}{54}\selectfont Bioquímica\\I\\} 
+\par\noindent\rule{\textwidth}{4pt}\\ 
+\begin{tikzpicture} 
+\shade[bottom color=lightgray,top color=white] (0,0) rectangle (\textwidth, 1.5) node[midway] {\textbf{\large \textit{\booksubtitle}}}; 
+\end{tikzpicture} 
+\begin{flushright} \Large Primera Edición \end{flushright} 
+vspace{\fill} 
+\textbf{\large \bookauthor}\\[3.5pt] 
+\textbf{\large \textit{\authorsubtitle}} 
+vspace{\fill} 
+\begin{center} 
+% Descomentar cuando tengas logo 
+\includegraphics[width=0.3\textwidth]{logo.pdf} 
+% \\[4pt] 
+\fontfamily{lmtt}\small{Publicación Académica\\ Facultad de Educación y Ciencias\\ Universidad de Sucre} 
+\end{center} 
+\end{flushleft} 
+\end{titlepage} 
+\restoregeometry 
+\thispagestyle{empty} 
+% ---- COLOFÓN ---- 
+\begin{flushleft} 
+vspace*{\fill} 
+Este libro de texto fue desarrollado para la asignatura Bioquímica I (Código 101283) del Programa de Biología.\\ Tipografiado usando \LaTeX.\\ 
+vspace{\fill} 
+\textcopyright{} \the\year{}  \bookauthor\\ Licencia: \booklicense 
+\end{flushleft} 
+\addtocounter{page}{2} 
+% ---- PREFACIO ---- 
+\chapter*{Prefacio} 
+Este libro \textit{Bioquímica I: Fundamentos Moleculares de la Vida} ha sido desarrollado como material de apoyo central para la asignatura Bioquímica I del Programa de Biología de la Universidad de Sucre. La Bioquímica constituye uno de los pilares fundamentales para la comprensión de los seres vivos. Esta disciplina nos permite sentar las bases para entender los fenómenos que ocurren en los organismos y su papel en los procesos metabólicos, siendo una de las áreas que mayor desarrollo ha alcanzado en los últimos siglos. El presente texto se estructura en cuatro partes que guiarán al estudiante desde los conceptos fundamentales hasta las aplicaciones prácticas: 
+\begin{itemize} 
+\item \textbf{Parte I: Fundamentos Conceptuales} - Introduce los principios básicos de la química de la vida 
+\item \textbf{Parte II: Biomoléculas: Estructura y Función} - Describe detalladamente cada grupo de biomoléculas 
+\item \textbf{Parte III: Compuestos Auxiliares y Metabolismo Básico} - Aborda vitaminas, minerales y principios metabólicos 
+\item \textbf{Parte IV: Aplicaciones y Contexto} - Relaciona la bioquímica con salud, ambiente y técnicas de laboratorio 
+\end{itemize} 
+Cada capítulo incluye objetivos de aprendizaje, ejemplos contextualizados, conceptos clave y referencias a investigaciones relevantes para nuestra región, particularmente del Caribe colombiano. Esperamos que este material sea una herramienta valiosa en la formación de los futuros biólogos y contribuya al fortalecimiento de la educación científica en nuestra institución. 
+vspace{1cm} 
+\begin{flushright} 
+\textit{Los autores}\\ 
+\textit{Sucre, Colombia}\\ 
+\textit{\today} 
+\end{flushright} 
+% ---- ÍNDICE GENERAL ---- 
+\setcounter{tocdepth}{3} 
+\tableofcontents 
+\mainmatter 
+% =========================== 
+% PARTE I: FUNDAMENTOS 
+% =========================== 
+\part{Fundamentos Conceptuales} 
+\include{chapters/chapter-0} 
+\include{chapters/chapter-1} 
+\include{chapters/chapter-2} 
+% =========================== 
+% BIBLIOGRAFÍA E ÍNDICE 
+% =========================== 
+\begin{thebibliography}{99} 
+\bibitem{alberts} Alberts, B. et al. (2011). \textit{Introducción a la Biología Celular}. Editorial Médica Panamericana. 
+\bibitem{nelson} Nelson, D. L., \& Cox, M. M. (2014). \textit{Principios de Bioquímica. Lehninger}. Omega. 
+\bibitem{berg} Berg, J. M., Tymoczko, J. L., \& Stryer, L. (2015). \textit{Biochemistry}. W.H. Freeman. 
+\bibitem{murray} Murray, R. et al. (2010). \textit{Harper Bioquímica ilustrada}. McGraw-Hill. 
+\end{thebibliography} 
+\backmatter 
+\addcontentsline{toc}{part}{Índice Alfabético} 
+\printindex 
+\end{document}
